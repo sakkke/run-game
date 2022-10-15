@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     static float JUMP_POWER = 7.5f;
-    static float MAX_SPEED = 2f;
+    static float MAX_SPEED = 4f;
     static float SPEED_POWER = 20f;
 
     private bool jumped = true;
