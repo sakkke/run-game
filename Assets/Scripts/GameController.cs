@@ -5,6 +5,7 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject Barrier;
     public GameObject Floor;
     public GameObject Player;
     public TextMeshProUGUI ScoreValue;
@@ -22,8 +23,17 @@ public class GameController : MonoBehaviour
             GameObject cloned = Instantiate(this.Floor, new Vector2(this.spawnX, -5f), Quaternion.identity);
             cloned.tag = "Floor";
             Debug.Log("Cloned a floor.");
+            this.GenerateSprites();
+            Debug.Log("Generated sprites.");
             this.spawnX += 40f;
         }
+    }
+
+    void GenerateSprites()
+    {
+        var radius = 15;
+        var x = this.spawnX + (float)Random.Range(radius, radius);
+        var cloned = Instantiate(this.Barrier, new Vector2(x, -4f), Quaternion.identity);
     }
 
     // Update is called once per frame

@@ -287,7 +287,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &490220980
 GameObject:
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 530794059}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -694,6 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886388772ed79174bbf5f83f6494617f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Barrier: {fileID: 2540470373303398420, guid: 0306e398b404947428a1dd084635f6c0, type: 3}
   Floor: {fileID: 1299206931424279552, guid: e75ff61420d265e4196b46de1e045cb0, type: 3}
   Player: {fileID: 530794054}
   ScoreValue: {fileID: 1924266391}
@@ -1069,7 +1070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1299206931424279566, guid: e75ff61420d265e4196b46de1e045cb0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1299206931424279566, guid: e75ff61420d265e4196b46de1e045cb0, type: 3}
       propertyPath: m_LocalPosition.x
