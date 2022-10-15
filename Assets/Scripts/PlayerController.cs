@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
         if (collision2D.gameObject.tag == "Floor")
         {
             this.jumped = false;
+            Debug.Log("Recovered jump limit.");
         }
     }
 
