@@ -19,7 +19,9 @@ public class GameController : MonoBehaviour
     {
         if (Player.transform.position.x > this.spawnX - 80f)
         {
-            Instantiate(this.Floor, new Vector2(this.spawnX, -5f), Quaternion.identity);
+            GameObject cloned = Instantiate(this.Floor, new Vector2(this.spawnX, -5f), Quaternion.identity);
+            cloned.tag = "Floor";
+            Debug.Log("Cloned a floor.");
             this.spawnX += 40f;
         }
     }
