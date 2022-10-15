@@ -35,11 +35,13 @@ public class PlayerController : MonoBehaviour
         {
             if (this.jumped)
             {
+                Debug.Log("Could not jump.");
                 return;
             }
 
             this.rb.AddForce(Vector2.up * this.GetJumpPower(), ForceMode2D.Impulse);
             this.jumped = true;
+            Debug.Log("Jumped.");
         }
     }
 

@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour
             this.score += 10;
             ScoreValue.text = $"{this.score}";
             this.scoreChanged = true;
+            Debug.Log("Increased score.");
         }
         else
         {
