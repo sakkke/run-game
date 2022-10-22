@@ -17,11 +17,7 @@ public class GameCameraController : MonoBehaviour
             position.x = 0;
         }
 
-        if (position.y < 0)
-        {
-            position.y = 0;
-        }
-
+        position.y = 0;
         position.z = -10;
 
         this.cam.transform.position = position;
