@@ -32,8 +32,9 @@ public class GameController : MonoBehaviour
     void GenerateSprites()
     {
         var radius = 15;
-        var x = this.spawnX + (float)Random.Range(radius, radius);
+        var x = this.spawnX + (float)Random.Range(-radius, radius);
         var cloned = Instantiate(this.Barrier, new Vector2(x, -4f), Quaternion.identity);
+        Debug.Log($"A barrier spawned at x={x}.");
     }
 
     // Update is called once per frame
