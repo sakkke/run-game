@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     static float MAX_SPEED = 4f;
     static float SPEED_POWER = 20f;
 
+    public GameObject GameOverPanel;
+
     private bool jumped = true;
     private Rigidbody2D rb;
 
@@ -52,7 +54,13 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision2D)
     {
-        if (collision2D.gameObject.tag == "Floor")
+        if (collision2D.gameObject.tag == "Barrier")
+        {
+            Time.timeScale = 0f;
+            GameOverPanel.SetActive(true);
+            Debug.Log("Game over!");
+        }
+        else if (collision2D.gameObject.tag == "Floor")
         {
             this.jumped = false;
             Debug.Log("Recovered jump limit.");

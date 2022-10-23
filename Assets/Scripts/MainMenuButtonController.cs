@@ -7,6 +7,7 @@ public class MainMenuButtonController : MonoBehaviour
 {
     public void OnClick()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenuScene");
     }
 
