@@ -6,6 +6,7 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     public GameObject Barrier;
+    public GameObject Bird;
     public GameObject Floor;
     public GameObject Player;
     public TextMeshProUGUI ScoreValue;
@@ -31,8 +32,16 @@ public class GameController : MonoBehaviour
 
     void GenerateSprites()
     {
+        this.SpawnBarrier();
+    }
+
+    float RandomX() {
         var radius = 15;
-        var x = this.spawnX + (float)Random.Range(-radius, radius);
+        return this.spawnX + (float)Random.Range(-radius, radius);
+    }
+
+    void SpawnBarrier() {
+        var x = this.RandomX();
         var cloned = Instantiate(this.Barrier, new Vector2(x, -4f), Quaternion.identity);
         Debug.Log($"A barrier spawned at x={x}.");
     }
