@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public GameObject Bird;
     public GameObject Floor;
     public GameObject Player;
+    public GameObject Star;
     public TextMeshProUGUI ScoreValue;
 
     private float deltaTime = 0f;
@@ -37,11 +38,25 @@ public class GameController : MonoBehaviour
         if (Random.value < 1 / 1000) {
             this.SpawnBird();
         }
+
+        if (Random.value < 10 / 100) {
+            this.SpawnStar();
+        }
+    }
+
+    public void IncreaseScore(int n) {
+        this.score += n;
+        ScoreValue.text = $"{this.score}";
+        Debug.Log("Increased score.");
     }
 
     float RandomX() {
         var radius = 15;
         return this.spawnX + (float)Random.Range(-radius, radius);
+    }
+
+    float RandomY() {
+        return (float)Random.Range(-1, -3);
     }
 
     void SpawnBarrier() {
@@ -54,6 +69,13 @@ public class GameController : MonoBehaviour
         var x = this.RandomX();
         var cloned = Instantiate(this.Bird, new Vector2(x, 0f), Quaternion.identity);
         Debug.Log($"A barrier spawned at x={x}.");
+    }
+
+    void SpawnStar() {
+        var x = this.RandomX();
+        var y = this.RandomY();
+        var cloned = Instantiate(this.Star, new Vector2(x, y), Quaternion.identity);
+        Debug.Log($"A star spawned at x={x}, y={y}.");
     }
 
     // Update is called once per frame
@@ -88,10 +110,8 @@ public class GameController : MonoBehaviour
                 return;
             }
 
-            this.score += 10;
-            ScoreValue.text = $"{this.score}";
+            this.IncreaseScore(10);
             this.scoreChanged = true;
-            Debug.Log("Increased score.");
         }
         else
         {

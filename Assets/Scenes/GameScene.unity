@@ -1019,7 +1019,7 @@ GameObject:
   - component: {fileID: 1872008613}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1040,6 +1040,7 @@ MonoBehaviour:
   Bird: {fileID: 2470519269297688729, guid: a4ccf96bede69f24884e8e3d3a55d04d, type: 3}
   Floor: {fileID: 1299206931424279552, guid: e75ff61420d265e4196b46de1e045cb0, type: 3}
   Player: {fileID: 530794054}
+  Star: {fileID: 7445644436982975452, guid: 158c20429415bf74cb1159091b02d736, type: 3}
   ScoreValue: {fileID: 1924266391}
 --- !u!4 &1872008614
 Transform:
