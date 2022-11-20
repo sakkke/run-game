@@ -68,7 +68,7 @@ public class GameController : MonoBehaviour
     void SpawnBird() {
         var x = this.RandomX();
         var cloned = Instantiate(this.Bird, new Vector2(x, 0f), Quaternion.identity);
-        Debug.Log($"A barrier spawned at x={x}.");
+        Debug.Log($"A bird spawned at x={x}.");
     }
 
     void SpawnStar() {
