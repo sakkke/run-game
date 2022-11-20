@@ -33,6 +33,10 @@ public class GameController : MonoBehaviour
     void GenerateSprites()
     {
         this.SpawnBarrier();
+
+        if (Random.value < 1 / 1000) {
+            this.SpawnBird();
+        }
     }
 
     float RandomX() {
@@ -43,6 +47,12 @@ public class GameController : MonoBehaviour
     void SpawnBarrier() {
         var x = this.RandomX();
         var cloned = Instantiate(this.Barrier, new Vector2(x, -4f), Quaternion.identity);
+        Debug.Log($"A barrier spawned at x={x}.");
+    }
+
+    void SpawnBird() {
+        var x = this.RandomX();
+        var cloned = Instantiate(this.Bird, new Vector2(x, 0f), Quaternion.identity);
         Debug.Log($"A barrier spawned at x={x}.");
     }
 

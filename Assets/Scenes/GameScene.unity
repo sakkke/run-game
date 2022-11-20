@@ -1037,6 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Barrier: {fileID: 2540470373303398420, guid: 0306e398b404947428a1dd084635f6c0, type: 3}
+  Bird: {fileID: 2470519269297688729, guid: a4ccf96bede69f24884e8e3d3a55d04d, type: 3}
   Floor: {fileID: 1299206931424279552, guid: e75ff61420d265e4196b46de1e045cb0, type: 3}
   Player: {fileID: 530794054}
   ScoreValue: {fileID: 1924266391}
