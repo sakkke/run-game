@@ -67,7 +67,8 @@ public class GameController : MonoBehaviour
 
     void SpawnBird() {
         var x = this.RandomX();
-        var cloned = Instantiate(this.Bird, new Vector2(x, 0f), Quaternion.identity);
+        var y = this.RandomY();
+        var cloned = Instantiate(this.Bird, new Vector2(x, y), Quaternion.identity);
         Debug.Log($"A bird spawned at x={x}.");
     }
 
