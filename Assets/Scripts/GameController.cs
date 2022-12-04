@@ -35,11 +35,11 @@ public class GameController : MonoBehaviour
     {
         this.SpawnBarrier();
 
-        if (Random.value < 1 / 1000) {
+        if (Random.value < 100 / 100) {
             this.SpawnBird();
         }
 
-        if (Random.value < 10 / 100) {
+        if (Random.value < 100 / 100) {
             this.SpawnStar();
         }
     }
